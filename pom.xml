@@ -27,7 +27,7 @@ limitations under the License.
   <groupId>org.apache.calcite</groupId>
   <artifactId>calcite</artifactId>
   <packaging>pom</packaging>
-  <version>1.13.0-kylin-r3-SNAPSHOT</version>
+  <version>1.13.0-kylin-r3</version>
 
   <!-- More project information. -->
   <name>Calcite</name>

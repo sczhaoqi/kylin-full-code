@@ -582,7 +582,8 @@ public class SqlStdOperatorTable extends ReflectiveSqlOperatorTable {
                 typeFactory.createSqlType(SqlTypeName.TIMESTAMP),
                 leftType.isNullable() || unitType.isNullable());
           default:
-            return leftType;
+            return typeFactory.createTypeWithNullability(leftType,
+              leftType.isNullable() || unitType.isNullable());
           }
         }
       };

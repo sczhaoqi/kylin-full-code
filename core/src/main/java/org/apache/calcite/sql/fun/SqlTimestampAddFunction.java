@@ -71,7 +71,10 @@ class SqlTimestampAddFunction extends SqlFunction {
                 opBinding.getOperandType(1).isNullable()
                     || opBinding.getOperandType(2).isNullable());
           default:
-            return opBinding.getOperandType(2);
+            return typeFactory.createTypeWithNullability(
+                opBinding.getOperandType(2),
+                opBinding.getOperandType(1).isNullable()
+                    || opBinding.getOperandType(2).isNullable());
           }
         }
       };

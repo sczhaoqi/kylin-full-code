@@ -273,7 +273,7 @@ public abstract class SqlUtil {
       if (id == null) {
         writer.keyword(operator.getName());
       } else {
-        id.unparse(writer, 0, 0);
+        id.unparseWithoutQuote(writer, 0, 0);
       }
     } else {
       writer.print(operator.getName());
